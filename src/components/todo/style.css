@@ -1,12 +1,46 @@
 .content-box{
-    width:200px;
+    width:300px;
     height: 200px;
     display: flex;
     flex-wrap: wrap;
-    border : 1px solid black;
+    flex-direction: column;
+    border : 5px solid purple;
+    border-radius: 30px;
+    padding:0px 30px;
+    gap:50px;
 }
 
 .content-listbox{
     display: flex;
     gap:15px;
+    flex-wrap: wrap;
+}
+
+.btn-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#del-btn{
+    background-color: white;
+    border-radius: 10px;
+    padding:10px;
+    width:120px;
+    border : 3px solid greenyellow
+}
+
+#del-btn:hover{
+    cursor : pointer;
+}
+
+#com-btn{
+    background-color: white;
+    border-radius: 10px;
+    padding:10px;
+    width:120px;
+    border : 3px solid red;
+}
+
+#com-btn:hover{
+    cursor : pointer;
 }

@@ -1,6 +1,5 @@
 import './style.css'
 import { useState } from 'react';
-import Todo from '../todo/Todo';
 import List from '../list/List';
 
 
@@ -11,6 +10,7 @@ function Formbox() {
         const [formValue,setFormValue] = useState([])
         const [title,setTitle] = useState('')
         const [body,setBody] = useState('')
+        const [id,setId] = useState(0)
         const handleGetTitleValue = (e) => {
             setTitle(e.target.value)
             
@@ -21,7 +21,9 @@ function Formbox() {
         }
 
         const addFormValue = () => {
-            setFormValue([...formValue,{title : title, body : body}])
+            setId(id + 1)
+            setFormValue([...formValue,{title : title, body : body, id : id, isDone : false}])
+            
         }
         
         
