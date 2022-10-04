@@ -1,0 +1,19 @@
+.list-box{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.content-listbox{
+    display: flex;
+    gap:15px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.todo-box{
+    display:flex;
+    gap:15px;
+    flex-wrap: wrap;
+}
