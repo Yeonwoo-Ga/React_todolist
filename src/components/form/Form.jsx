@@ -57,7 +57,6 @@ function Formbox() {
             <button type='button' className='input-btn' onClick={addFormValue}>추가하기</button>
         </form>
         <List name='Working' formValue={formValue} changeIsDone={changeIsDone} deleteItem={deleteItem}/>
-        <List name='Done' formValue={doneValue}/>
     </>
     )
 }
