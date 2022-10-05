@@ -11,24 +11,26 @@ function Formbox() {
         const [title,setTitle] = useState('')
         const [body,setBody] = useState('')
         const [id,setId] = useState(0)
-        const [doneValue,setDoneValue] = useState([])
+
+
         const handleGetTitleValue = (e) => {
             setTitle(e.target.value)
-            
         }
         const handleGetBodyValue = (e) => {
             setBody(e.target.value)
-           
+         
         }
-
+     
         const addFormValue = () => {
+            if(title !== '' && body  !==''){
             setId(id + 1)
             const copy = [...formValue]
             setFormValue([...copy,{title : title, body : body, id : id, isDone : false}])
             setTitle('')
             setBody('')
-            
+            }else return alert('항목을 입력하세요');
         }
+
         const changeIsDone = (id) =>{
             setFormValue(
                 formValue.map((todo) =>
